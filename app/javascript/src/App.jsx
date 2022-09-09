@@ -12,6 +12,7 @@ import Dashboard from "components/Dashboard";
 import MyPreferences from "components/MyPreferences";
 import PageLoader from "components/PageLoader";
 import { CreateTask, ShowTask, EditTask } from "components/Tasks";
+import DownloadReport from "components/Tasks/DownloadReport";
 import { getFromLocalStorage } from "utils/storage";
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
           path="/"
           redirectRoute="/login"
         />
+        <Route exact component={DownloadReport} path="/tasks/report" />;
       </Switch>
     </Router>
   );
