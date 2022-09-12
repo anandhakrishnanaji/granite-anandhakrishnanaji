@@ -44,13 +44,13 @@ const App = () => {
         <Route exact component={Signup} path="/signup" />
         <Route exact component={Login} path="/login" />
         <Route exact component={MyPreferences} path="/my/preferences" />
+        <Route exact component={DownloadReport} path="/tasks/report" />
         <PrivateRoute
           component={Dashboard}
           condition={isLoggedIn}
           path="/"
           redirectRoute="/login"
         />
-        <Route exact component={DownloadReport} path="/tasks/report" />;
       </Switch>
     </Router>
   );
